@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ShoppingBag, ShoppingCart } from 'lucide-react';
+import { Menu, X, ShoppingBag, ShoppingCart, Home } from 'lucide-react';
 import Cart from './Cart';
 import { useCartStore } from '../store/cartStore';
 
@@ -22,8 +22,8 @@ const Navbar: React.FC = () => {
               to="/" 
               className="text-2xl font-bold flex items-center text-green-600"
             >
-              <ShoppingBag className="mr-2" />
-              <span>MarchéDirect</span>
+              <Home className="mr-2" />
+              <span>Village Market Express</span>
             </Link>
 
             {/* Desktop Menu */}
@@ -34,8 +34,11 @@ const Navbar: React.FC = () => {
               <Link to="/catalogue" className="text-gray-700 hover:text-green-600 transition-colors">
                 Catalogue
               </Link>
-              <Link to="/commande" className="text-gray-700 hover:text-green-600 transition-colors">
-                Commander
+              <Link to="/about" className="text-gray-700 hover:text-green-600 transition-colors">
+                À propos
+              </Link>
+              <Link to="/contact" className="text-gray-700 hover:text-green-600 transition-colors">
+                Contact
               </Link>
               <button
                 onClick={() => setIsCartOpen(true)}
@@ -54,7 +57,7 @@ const Navbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp
+                Commander via WhatsApp
               </a>
             </div>
 
@@ -101,11 +104,18 @@ const Navbar: React.FC = () => {
                 Catalogue
               </Link>
               <Link 
-                to="/commande" 
+                to="/about" 
                 className="text-gray-700 hover:text-green-600 transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Commander
+                À propos
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-gray-700 hover:text-green-600 transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
               </Link>
               <a 
                 href="https://wa.me/123456789?text=Bonjour%2C%20je%20souhaite%20passer%20une%20commande."
@@ -113,7 +123,7 @@ const Navbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp
+                Commander via WhatsApp
               </a>
             </div>
           </div>
