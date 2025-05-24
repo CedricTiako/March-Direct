@@ -8,17 +8,29 @@ import Catalogue from './pages/Catalogue';
 import Auth from './components/Auth';
 import Profile from './components/Profile';
 import { useAuthStore } from './store/authStore';
+import { useThemeStore } from './store/themeStore';
 
 function App() {
   const { user, loadUser } = useAuthStore();
+  const { theme } = useThemeStore();
 
   useEffect(() => {
     loadUser();
   }, [loadUser]);
 
+  useEffect(() => {
+    // Handle system theme preference
+    if (theme === 'system') {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', isDark);
+    } else {
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+    }
+  }, [theme]);
+
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -40,5 +52,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
