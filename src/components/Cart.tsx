@@ -21,7 +21,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
     
     const total = formatPrice(getTotalPrice());
     const whatsappMessage = encodeURIComponent(`Bonjour, je souhaite commander :\n\n${message}\n\nTotal : ${total} FCFA\n\nMerci de me confirmer la disponibilité et le délai de livraison.`);
-    window.open(`https://wa.me/123456789?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/237650912346?text=${whatsappMessage}`, '_blank');
     clearCart();
     onClose();
   };

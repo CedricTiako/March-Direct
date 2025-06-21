@@ -16,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   const getWhatsAppLink = (product: Product) => {
     const message = encodeURIComponent(`Bonjour, je souhaite commander 1${product.unit} de ${product.name}. Merci !`);
-    return `https://wa.me/123456789?text=${message}`;
+    return `https://wa.me/237650912346?text=${message}`;
   };
 
   return (
