@@ -14,10 +14,13 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Des produits frais, directs du village, à prix juste.
+              Produits frais et locaux livrés chez vous !
             </h1>
-            <p className="text-lg md:text-xl mb-8 opacity-90">
-              Commandez des produits locaux de qualité supérieure, livrés directement à votre porte. Sans intermédiaires, pour des prix plus justes.
+            <p className="text-lg md:text-xl mb-4 opacity-90">
+              Du cœur du village à votre table.
+            </p>
+            <p className="text-lg mb-8 opacity-90">
+              Village Market Express connecte les producteurs des villages camerounais aux consommateurs urbains en quête de fraîcheur, de qualité et de produits du terroir.
             </p>
             
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
@@ -25,7 +28,7 @@ const Home: React.FC = () => {
                 to="/catalogue"
                 className="bg-white text-green-700 px-6 py-3 rounded-md font-semibold flex justify-center items-center hover:bg-gray-100 transition-colors"
               >
-                Voir le catalogue
+                Découvrir notre catalogue
                 <ArrowRight size={18} className="ml-2" />
               </Link>
               

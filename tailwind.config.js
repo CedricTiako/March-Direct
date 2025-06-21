@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -11,14 +12,14 @@ export default {
           900: '#1B5E20', // Darkest green
         },
         'beige': {
-          100: '#FFF8E1', // Light beige
+          100: '#FFF8E7', // Light beige for backgrounds
         },
         'brown': {
           600: '#8D6E63', // Soft brown
         }
       },
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
+        sans: ['Nunito', 'sans-serif'],
       },
     },
   },
